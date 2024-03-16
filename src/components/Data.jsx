@@ -25,29 +25,7 @@ export const Data = () => {
   return (
     <Wrap>
     
-       <table>
-    {/* <thead>
-      <tr className='Heading'>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Chart</th>
-        <th>Change</th>
-        <th>Market Cap</th>
-        <th>Trade</th>
-      </tr>
-      <tbody className='Second'>
-          <tr>
-        <td>Bitcoin</td>
-        <td>50%</td>
-        <td>50%</td>
-        <td>50%</td>
-        <td>50%</td>
-        <td>50%</td>
-       </tr> */}
-          
-
-      {/* </tbody> */}
-    {/* </thead> */}
+   
 
     <table>
   <tr>
@@ -58,7 +36,7 @@ export const Data = () => {
     <th>Market-cap</th>
     <th>Trade</th>
   </tr>
-  <tr>
+  
   {data.map((item) => (
     <tr key={item.name}>
       <td>{item.name}</td>
@@ -69,10 +47,10 @@ export const Data = () => {
       <td><button>Trade</button></td>
     </tr>
   ))}
-  </tr>
+  
   
 </table>
-    </table>
+   
 </Wrap>      
   )
 }

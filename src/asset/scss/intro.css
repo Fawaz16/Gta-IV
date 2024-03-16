@@ -1,0 +1,737 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.videoclip {
+  width: 100%;
+  /* Set the width to 100% of the viewport width */
+  height: 100vh;
+  /* Use max-height to prevent excessive stretching */
+}
+
+.videoclip video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.trailerclip {
+  width: 100%;
+  /* Set the width to 100% of the viewport width */
+  height: 100vh;
+  /* Use max-height to prevent excessive stretching */
+}
+
+.trailerclip video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: brightness(60%) contrast(130%);
+          filter: brightness(60%) contrast(130%);
+}
+
+.sidebar {
+  width: 30%;
+  height: 100vh;
+  background: #888888;
+  background: -webkit-gradient(linear, left top, right top, from(#888888), color-stop(26%, #46004c), color-stop(84%, #464545), color-stop(90%, #3f3e3f));
+  background: linear-gradient(90deg, #888888 0%, #46004c 26%, #464545 84%, #3f3e3f 90%);
+  position: fixed;
+  right: -30%;
+  top: 0;
+  z-index: 2;
+  -webkit-transition: left 1.5s ease-in-out;
+  transition: left 1.5s ease-in-out;
+}
+
+.sidebar.open {
+  left: 0;
+  -webkit-transition: right 0.6s ease-in-out;
+  transition: right 0.6s ease-in-out;
+}
+
+.toggle-btn {
+  background-color: #221224;
+  border: none;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+nav {
+  padding-top: 60px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  padding: 15px;
+  color: white;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.intro-section,
+.nav-section {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  opacity: 2;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+#special1 {
+  background-color: #e73ae7;
+  color: white;
+  border: none;
+  -webkit-animation: pulse 0.5s infinite alternate;
+          animation: pulse 0.5s infinite alternate;
+}
+
+.nav-section.visible {
+  opacity: 1;
+}
+
+.intro-section.hidden {
+  display: none;
+}
+
+.nav-button button {
+  width: 130px;
+  height: 40px;
+  background-color: #e920df;
+  color: white;
+  margin-left: 10px;
+  border: none;
+  margin-top: 50px;
+  cursor: pointer;
+  -webkit-animation: pulse 0.5s infinite alternate;
+          animation: pulse 0.5s infinite alternate;
+}
+
+#special2 button {
+  background-color: #000;
+  color: #f0f0f0;
+}
+
+.about {
+  margin-top: 30px;
+}
+
+.about h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.about span {
+  color: #bd11bd;
+}
+
+.flexer {
+  margin: 10px;
+}
+
+.flexer img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.details p {
+  width: 100%;
+  font-size: 17px;
+}
+
+.details {
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.flexer .details p {
+  line-height: 30px;
+  font-size: 19px;
+  margin-top: 20px;
+}
+
+.flexer .get-now button {
+  width: 130px;
+  cursor: pointer;
+  height: 40px;
+  border: 2px solid #fff4ff;
+  background: none;
+  margin: 10px;
+  margin-top: 30px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #000;
+  -webkit-animation: pulse 0.5s infinite alternate;
+          animation: pulse 0.5s infinite alternate;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.decription {
+  margin-top: 30px;
+  padding-bottom: 20px;
+  background: #888888;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#888888), color-stop(26%, #46004c), color-stop(84%, #464545), color-stop(90%, #3f3e3f));
+  background: linear-gradient(90deg, #888888 0%, #46004c 26%, #464545 84%, #3f3e3f 90%);
+  -webkit-box-shadow: 0px 0px 5px #2c0131;
+          box-shadow: 0px 0px 5px #2c0131;
+}
+
+.decription h1 {
+  font-size: 40px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.decription p {
+  text-align: center;
+  padding-top: 10px;
+  line-height: 25px;
+}
+
+#hidden {
+  visibility: hidden;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+}
+
+.slides {
+  margin-top: 20px;
+}
+
+.overall {
+  padding-bottom: 20px;
+  background: #3f5efb;
+  background: radial-gradient(circle, #3f5efb 0%, #fc466b 100%);
+  border-radius: 50px;
+}
+
+.newsletter {
+  max-width: 50%;
+  margin: 0 auto;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 20px;
+}
+
+.newsletter-item button {
+  width: 150px;
+  height: 40px;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 20px;
+  border: none;
+  margin-top: 30px;
+  border: 3px solid #f12ff1;
+  margin-bottom: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: #fff;
+  -webkit-animation: pulse 0.5s infinite alternate;
+          animation: pulse 0.5s infinite alternate;
+}
+
+.newsletter h2 {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.newsletter p {
+  padding-left: 20px;
+}
+
+.newsletter-item img {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.newsletter-item span {
+  font-size: 13px;
+  padding-left: 20px;
+}
+
+.newsletter-item {
+  background: #888888;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#888888), color-stop(26%, #46004c), color-stop(84%, #464545), color-stop(90%, #3f3e3f));
+  background: linear-gradient(90deg, #888888 0%, #46004c 26%, #464545 84%, #3f3e3f 90%);
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 20px;
+}
+
+.newsletter-item h1 {
+  text-align: center;
+}
+
+.over h1 {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 30px;
+  padding-top: 25px;
+}
+
+.over {
+  background: url("https://image-cdn.essentiallysports.com/wp-content/uploads/gta-6-gta-vi-3049722.jpg");
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120vh;
+  width: 100%;
+}
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  text-align: center;
+  /* Adjust if you prefer left or right alignment */
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* Wrap content on smaller screens */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-info,
+.footer-links,
+.footer-copyright {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  /* Make sections responsive */
+  padding: 10px;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.footer-logo img {
+  width: 70%;
+}
+
+.footer-description {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  margin: 0 5px;
+}
+
+.social-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #000;
+}
+
+.footer-heading {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: #666;
+}
+
+.footer form input {
+  padding: 8px;
+  border: none;
+  border: 3px solid #db16ba;
+  margin: 10px;
+}
+
+.footer form button {
+  padding: 10px;
+  border: none;
+  width: 30%;
+  background-color: #db16ba;
+  color: #f0f0f0;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.footer h2 {
+  text-align: center;
+  padding-top: 30px;
+  color: #35022c;
+}
+
+.footer form {
+  max-width: 50%;
+  margin: 0 auto;
+  border: 3px solid #db16ba;
+  height: 50%;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 50%;
+    left: -100%;
+  }
+  .toggle-btn {
+    position: absolute;
+    top: 60px;
+    left: 350px;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  .front-page h1 {
+    color: white;
+    font-size: 37px;
+    font-family: fantasy;
+    -webkit-text-stroke: 1px #7b1b8f;
+  }
+  .front-page p {
+    color: white;
+    -webkit-text-stroke: 1px #7b1b8f;
+    font-size: 15px;
+    width: 80%;
+  }
+  .front-page span {
+    font-size: 10px;
+    width: 40%;
+  }
+  .front-page button {
+    width: 100px;
+    cursor: pointer;
+    height: 30px;
+    border: 2px solid #fff4ff;
+    background: none;
+    margin: 10px;
+    margin-top: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #ffff;
+  }
+  .front-page {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+  }
+  .trailerclip {
+    background: url(https://c4.wallpaperflare.com/wallpaper/0/603/719/gta-vi-grand-theft-auto-grand-theft-auto-6-rockstar-games-hd-wallpaper-preview.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+  }
+  .trailerclip video {
+    display: none;
+  }
+  .details {
+    padding: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .details p {
+    width: 100% !important;
+  }
+  .decription {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    background: #888888;
+    color: white;
+    padding: 10px;
+    background: -webkit-gradient(linear, left top, right top, from(#888888), color-stop(26%, #46004c), color-stop(84%, #464545), color-stop(90%, #3f3e3f));
+    background: linear-gradient(90deg, #888888 0%, #46004c 26%, #464545 84%, #3f3e3f 90%);
+    -webkit-box-shadow: 0px 0px 0px #2c0131;
+            box-shadow: 0px 0px 0px #2c0131;
+  }
+  .decription h1 {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 15px;
+  }
+  .decription p {
+    text-align: center;
+    padding-top: 10px;
+    line-height: 25px;
+  }
+  #hidden {
+    visibility: hidden;
+  }
+  .slides img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .slides {
+    margin-top: 10px;
+  }
+  .overall {
+    padding-bottom: 20px;
+    background: white;
+    background: radial-gradient(circle, white 0%, white 100%);
+    border-radius: 0px;
+  }
+  .newsletter {
+    max-width: 70%;
+    margin: 0 auto;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .newsletter-item button {
+    width: 120px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 10px;
+    border: none;
+    margin-top: 30px;
+    border: 3px solid #f12ff1;
+    margin-bottom: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #fff;
+  }
+  .newsletter h2 {
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+  .newsletter p {
+    padding-left: 10px;
+  }
+  .newsletter-item img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .newsletter-item span {
+    font-size: 13px;
+    padding-left: 10px;
+  }
+  .newsletter-item {
+    background: #888888;
+    color: white;
+    background: -webkit-gradient(linear, left top, right top, from(#888888), color-stop(26%, #46004c), color-stop(84%, #464545), color-stop(90%, #3f3e3f));
+    background: linear-gradient(90deg, #888888 0%, #46004c 26%, #464545 84%, #3f3e3f 90%);
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 20px;
+  }
+  .newsletter-item h1 {
+    text-align: center;
+  }
+  .over h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 30px;
+    padding-top: 25px;
+  }
+  .over {
+    background: url("https://image-cdn.essentiallysports.com/wp-content/uploads/gta-6-gta-vi-3049722.jpg");
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+  }
+  .footer form input {
+    padding: 13px;
+    border: none;
+    border: 3px solid #db16ba;
+    margin: 10px;
+  }
+  .footer form button {
+    padding: 10px;
+    border: none;
+    width: 50%;
+    background-color: #db16ba;
+    color: #f0f0f0;
+    margin: 10px;
+  }
+  .footer h2 {
+    text-align: center;
+    padding-top: 20px;
+    color: #35022c;
+  }
+  .footer form {
+    max-width: 80%;
+    margin: 0 auto;
+    border: 3px solid #db16ba;
+    height: 80%;
+    padding-bottom: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .toggle-btn {
+    border: none;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .front-page {
+    position: absolute;
+    top: 100px;
+    left: 70px;
+  }
+  .front-page h1 {
+    color: white;
+    font-size: 80px;
+    font-family: fantasy;
+    -webkit-text-stroke: 1px #7b1b8f;
+  }
+  .front-page p {
+    color: white;
+    -webkit-text-stroke: 1px #7b1b8f;
+    font-size: 25px;
+    width: 50%;
+  }
+  .front-page span {
+    font-size: 30px;
+    width: 70%;
+  }
+  .front-page button {
+    width: 150px;
+    cursor: pointer;
+    height: 50px;
+    border: 2px solid #fff4ff;
+    background: none;
+    margin: 10px;
+    margin-top: 50px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #ffff;
+  }
+  .about h1 {
+    font-size: 40px;
+    font-weight: 500;
+    -webkit-text-stroke: 1px #510664;
+  }
+  .flexer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 20px;
+  }
+  .flexer img {
+    width: 50%;
+    margin-right: 30px;
+  }
+  .details {
+    margin-left: 2px;
+    padding-left: 30px;
+  }
+  .flexer .details p {
+    line-height: 30px;
+    font-size: 19px;
+    margin-top: 60px;
+  }
+  .decription {
+    max-width: 80%;
+    margin: 0 auto;
+    color: #ffff;
+    margin-top: 60px;
+    padding: 20px;
+  }
+  .overall {
+    margin: 20px;
+  }
+  .slides img {
+    max-width: 70%;
+    margin: 0 auto;
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=intro.css.map */

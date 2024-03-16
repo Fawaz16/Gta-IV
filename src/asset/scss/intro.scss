@@ -1,0 +1,717 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.videoclip {
+  width: 100%; /* Set the width to 100% of the viewport width */
+  height: 100vh; /* Use max-height to prevent excessive stretching */
+}
+
+.videoclip video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.trailerclip {
+  width: 100%; /* Set the width to 100% of the viewport width */
+  height: 100vh; /* Use max-height to prevent excessive stretching */
+}
+
+.trailerclip video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%) contrast(130%);
+}
+
+.sidebar {
+  width: 30%;
+  height: 100vh;
+  background: rgb(136, 136, 136);
+  background: linear-gradient(
+    90deg,
+    rgba(136, 136, 136, 1) 0%,
+    rgba(70, 0, 76, 1) 26%,
+    rgba(70, 69, 69, 1) 84%,
+    rgba(63, 62, 63, 1) 90%
+  );
+  position: fixed;
+  right: -30%;
+  top: 0;
+  z-index: 2;
+  transition: left 1.5s ease-in-out;
+}
+
+.sidebar.open {
+  left: 0;
+  transition: right 0.6s ease-in-out;
+}
+
+.toggle-btn {
+  background-color: rgb(34, 18, 36);
+  border: none;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+nav {
+  padding-top: 60px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  padding: 15px;
+  color: white;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.intro-section,
+.nav-section {
+  flex-grow: 1;
+  opacity: 2;
+  transition: opacity 0.5s ease;
+}
+#special1 {
+  background-color: rgb(231, 58, 231);
+  color: white;
+  border: none;
+  animation: pulse 0.5s infinite alternate;
+}
+.nav-section.visible {
+  opacity: 1;
+}
+
+.intro-section.hidden {
+  display: none;
+}
+
+.nav-button button {
+  width: 130px;
+  height: 40px;
+  background-color: rgb(233, 32, 223);
+  color: rgb(255, 255, 255);
+  // border: 3px solid rgb(255, 255, 255);
+  margin-left: 10px;
+  border: none;
+  margin-top: 50px;
+  cursor: pointer;
+  animation: pulse 0.5s infinite alternate;
+}
+#special2 button {
+  background-color: #000;
+  color: #f0f0f0;
+}
+
+// about
+
+.about {
+  margin-top: 30px;
+}
+.about h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+}
+.about span {
+  color: rgb(189, 17, 189);
+}
+
+.flexer {
+  margin: 10px;
+}
+.flexer img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.details p {
+  width: 100%;
+  font-size: 17px;
+}
+
+.details {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.flexer .details p {
+  line-height: 30px;
+  font-size: 19px;
+  margin-top: 20px;
+}
+
+.flexer .get-now button {
+  width: 130px;
+  cursor: pointer;
+  height: 40px;
+  border: 2px solid rgb(255, 244, 255);
+  background: none;
+  margin: 10px;
+  margin-top: 30px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #000;
+  animation: pulse 0.5s infinite alternate;
+}
+// .flexer .get-now button:hover {
+//   animation: pulse 0.5s infinite alternate;
+// }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+// characters
+.decription {
+  margin-top: 30px;
+  padding-bottom: 20px;
+  background: rgb(136, 136, 136);
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(136, 136, 136, 1) 0%,
+    rgba(70, 0, 76, 1) 26%,
+    rgba(70, 69, 69, 1) 84%,
+    rgba(63, 62, 63, 1) 90%
+  );
+  box-shadow: 0px 0px 5px rgb(44, 1, 49);
+}
+
+.decription h1 {
+  font-size: 40px;
+  text-align: center;
+  padding-top: 25px;
+}
+.decription p {
+  text-align: center;
+  padding-top: 10px;
+  line-height: 25px;
+}
+#hidden {
+  visibility: hidden;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+}
+
+.slides {
+  margin-top: 20px;
+}
+
+.overall {
+  padding-bottom: 20px;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  border-radius: 50px;
+}
+
+// news
+.newsletter {
+  max-width: 50%;
+  margin: 0 auto;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 20px;
+}
+
+.newsletter-item button {
+  width: 150px;
+  height: 40px;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 20px;
+  border: none;
+  margin-top: 30px;
+  border: 3px solid rgb(241, 47, 241);
+  margin-bottom: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: #fff;
+  animation: pulse 0.5s infinite alternate;
+}
+.newsletter h2 {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.newsletter p {
+  padding-left: 20px;
+}
+.newsletter-item img {
+  width: 100%;
+  padding-bottom: 20px;
+}
+.newsletter-item span {
+  font-size: 13px;
+  padding-left: 20px;
+}
+.newsletter-item {
+  background: rgb(136, 136, 136);
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(136, 136, 136, 1) 0%,
+    rgba(70, 0, 76, 1) 26%,
+    rgba(70, 69, 69, 1) 84%,
+    rgba(63, 62, 63, 1) 90%
+  );
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 20px;
+}
+.newsletter-item h1 {
+  text-align: center;
+}
+.over h1 {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 30px;
+  padding-top: 25px;
+}
+.over {
+  background: url("https://image-cdn.essentiallysports.com/wp-content/uploads/gta-6-gta-vi-3049722.jpg");
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120vh;
+  width: 100%;
+}
+// footer
+.footer {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  text-align: center; /* Adjust if you prefer left or right alignment */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Wrap content on smaller screens */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-info,
+.footer-links,
+.footer-copyright {
+  flex: 1; /* Make sections responsive */
+  padding: 10px;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.footer-logo img {
+  width: 70%;
+}
+
+.footer-description {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  margin: 0 5px;
+}
+
+.social-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #000;
+}
+
+.footer-heading {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: #666;
+}
+.footer form input {
+  padding: 8px;
+  border: none;
+  border: 3px solid rgb(219, 22, 186);
+  margin: 10px;
+}
+.footer form button {
+  padding: 10px;
+  border: none;
+  width: 30%;
+  background-color: rgb(219, 22, 186);
+  color: #f0f0f0;
+  margin: 10px;
+  cursor: pointer;
+}
+.footer h2 {
+  text-align: center;
+  padding-top: 30px;
+  color: rgb(53, 2, 44);
+}
+.footer form {
+  max-width: 50%;
+  margin: 0 auto;
+  border: 3px solid rgb(219, 22, 186);
+  height: 50%;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 50%;
+    left: -100%;
+  }
+
+  .toggle-btn {
+    position: absolute;
+    top: 60px;
+    left: 350px;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  .front-page h1 {
+    color: white;
+    font-size: 37px;
+    font-family: fantasy;
+    -webkit-text-stroke: 1px rgb(123, 27, 143);
+  }
+  .front-page p {
+    color: white;
+    -webkit-text-stroke: 1px rgb(123, 27, 143);
+    font-size: 15px;
+    width: 80%;
+  }
+  .front-page span {
+    font-size: 10px;
+    width: 40%;
+  }
+  .front-page button {
+    width: 100px;
+    cursor: pointer;
+    height: 30px;
+    border: 2px solid rgb(255, 244, 255);
+    background: none;
+    margin: 10px;
+    margin-top: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #ffff;
+  }
+
+  .front-page {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+  }
+  .trailerclip {
+    background: url(https://c4.wallpaperflare.com/wallpaper/0/603/719/gta-vi-grand-theft-auto-grand-theft-auto-6-rockstar-games-hd-wallpaper-preview.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+  }
+  .trailerclip video {
+    display: none;
+  }
+
+  // about
+  .details {
+    padding: 10px;
+    justify-content: center;
+  }
+  .details p {
+    width: 100% !important;
+  }
+
+  // characters
+  .decription {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    background: rgb(136, 136, 136);
+    color: white;
+    padding: 10px;
+    background: linear-gradient(
+      90deg,
+      rgba(136, 136, 136, 1) 0%,
+      rgba(70, 0, 76, 1) 26%,
+      rgba(70, 69, 69, 1) 84%,
+      rgba(63, 62, 63, 1) 90%
+    );
+    box-shadow: 0px 0px 0px rgb(44, 1, 49);
+  }
+
+  .decription h1 {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 15px;
+  }
+  .decription p {
+    text-align: center;
+    padding-top: 10px;
+    line-height: 25px;
+  }
+  #hidden {
+    visibility: hidden;
+  }
+
+  .slides img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .slides {
+    margin-top: 10px;
+  }
+
+  .overall {
+    padding-bottom: 20px;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(
+      circle,
+      rgb(255, 255, 255) 0%,
+      rgb(255, 255, 255) 100%
+    );
+    border-radius: 0px;
+  }
+
+  // news
+  .newsletter {
+    max-width: 70%;
+    margin: 0 auto;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .newsletter-item button {
+    width: 120px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 10px;
+    border: none;
+    margin-top: 30px;
+    border: 3px solid rgb(241, 47, 241);
+    margin-bottom: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #fff;
+  }
+  .newsletter h2 {
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+  .newsletter p {
+    padding-left: 10px;
+  }
+  .newsletter-item img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .newsletter-item span {
+    font-size: 13px;
+    padding-left: 10px;
+  }
+  .newsletter-item {
+    background: rgb(136, 136, 136);
+    color: white;
+    background: linear-gradient(
+      90deg,
+      rgba(136, 136, 136, 1) 0%,
+      rgba(70, 0, 76, 1) 26%,
+      rgba(70, 69, 69, 1) 84%,
+      rgba(63, 62, 63, 1) 90%
+    );
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 20px;
+  }
+  .newsletter-item h1 {
+    text-align: center;
+  }
+  .over h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 30px;
+    padding-top: 25px;
+  }
+  .over {
+    background: url("https://image-cdn.essentiallysports.com/wp-content/uploads/gta-6-gta-vi-3049722.jpg");
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+  }
+
+  .footer form input {
+    padding: 13px;
+    border: none;
+    border: 3px solid rgb(219, 22, 186);
+    margin: 10px;
+  }
+  .footer form button {
+    padding: 10px;
+    border: none;
+    width: 50%;
+    background-color: rgb(219, 22, 186);
+    color: #f0f0f0;
+    margin: 10px;
+  }
+  .footer h2 {
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(53, 2, 44);
+  }
+  .footer form {
+    max-width: 80%;
+    margin: 0 auto;
+    border: 3px solid rgb(219, 22, 186);
+    height: 80%;
+    padding-bottom: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .toggle-btn {
+    border: none;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  // front page
+  .front-page {
+    position: absolute;
+    top: 100px;
+    left: 70px;
+  }
+
+  .front-page h1 {
+    color: white;
+    font-size: 80px;
+    font-family: fantasy;
+    -webkit-text-stroke: 1px rgb(123, 27, 143);
+  }
+  .front-page p {
+    color: white;
+    -webkit-text-stroke: 1px rgb(123, 27, 143);
+    font-size: 25px;
+    width: 50%;
+  }
+  .front-page span {
+    font-size: 30px;
+    width: 70%;
+  }
+  .front-page button {
+    width: 150px;
+    cursor: pointer;
+    height: 50px;
+    border: 2px solid rgb(255, 244, 255);
+    background: none;
+    margin: 10px;
+    margin-top: 50px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #ffff;
+  }
+  // about
+  .about h1 {
+    font-size: 40px;
+    font-weight: 500;
+    -webkit-text-stroke: 1px rgb(81, 6, 100);
+  }
+  .flexer {
+    display: flex;
+    margin: 20px;
+  }
+  .flexer img {
+    width: 50%;
+    margin-right: 30px;
+  }
+  .details {
+    margin-left: 2px;
+    padding-left: 30px;
+  }
+  .flexer .details p {
+    line-height: 30px;
+    font-size: 19px;
+    margin-top: 60px;
+  }
+  .decription {
+    max-width: 80%;
+    margin: 0 auto;
+    color: #ffff;
+    margin-top: 60px;
+    padding: 20px;
+  }
+  .overall {
+    margin: 20px;
+  }
+  .slides img {
+    max-width: 70%;
+    margin: 0 auto;
+    height: 100%;
+  }
+}
